@@ -1,6 +1,18 @@
+/* Set font size to 70%  and box-size to border-box */
 html {
     font-size: 70%;
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: blue;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    padding: 30px;
 }
 
 *, *::before, *::after {
@@ -10,58 +22,77 @@ html {
 }
 
 .calculator {
-    border: 1.2px solid darkslategray;
-    border-radius: 7px;
+    border: 17px solid black;
+    border-radius: 17px;
+    /* An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):*/
     position: absolute;
+    /* This positions calculator 50% from top and 50% from the left */
     top: 50%;
     left: 50%;
+    /* This property allows you to rotate, scale, move, skew, etc., elements. */
+    /* The translate() method moves an element from its current position 
+    (according to the parameters given for the X-axis and the Y-axis).*/
     transform: translate(-50%, -50%);
+    /* Width calculator */
     width: 500px;
+    background-color: lightgreen;
+    z-index = 1;
 }
 
+/* This formats the calculator screen */
 .calculator-screen {
+    /* This gives the width of screen to that of calculator */
     width: 100%;
+    /* rem	Relative to font-size of the root element */
     font-size: 5rem;
+    /* Height of calculator screen */
     height: 80px;
     border: none;
+    /* Screen background black */
     background-color: black;
+    /* Text white */
     color: white;
+    /* Numbers displayed on right side of screen. */
     text-align: right;
+    /* This pads to the right of the number on screen */
     padding-right: 20px;
+    /* This pads to the left of number when it gets larger */
     padding-left: 20px;
-    border-radius: 7px 7px 0px 0px;
-    
 }
 
-button {
+.numbers {
     height: 70px;
     border-radius: 3px;
     border: 1px solid darkslategray;
     background-color: transparent;
     font-size: 3.2rem;
-    color: black;
-    background-image: linear-gradient(to bottom, transparent, transparent 50%, 
-        rgba(0, 0, 0, .06));
+    color: white;
+    /*linear-gradient*/
+    background-image: linear-gradient(to top, transparent, transparent 10%, 
+     red, green, blue);
     text-shadow: 0 1px rgba(255, 255, 255, .4);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .05), inset 0 1px 0 0 
         0 1px 0 0 rgba(255, 255, 255, .05);
 }
 
 button:hover {
-    background-color: #e1e1e1;
+    background-color: green;
 }
 
 .operator {
-    color: black; 
-    background-image: linear-gradient (to bottom, transparent, transparent 50%, 
-        rgba(0, 0, 0, .5));
-    background-color: lightgray;
+    height: 70px;
+    border-radius: 3px;
+    border: 1px solid darkslategray;
+    background-color: blue;
+    font-size: 3.2rem;
+    color: white;
 }
 
 .all-clear {
     background-color: red;
     border-color: darkslategray;
     color: #fff;
+    font-size: 25px;
 }
 
 .all-clear:hover {
@@ -69,14 +100,14 @@ button:hover {
 }
 
 .equal-sign {
-    background-color: blue;
+    background-color: green;
     border-color: darkslategray;
     color: #fff;
     height: 100%;
     grid-area: 2 / 4 / 6 / 5;
 }
 .equal-sign:hover {
-    background-color: darkblue;
+    background-color: blue;
     
 }
 
@@ -85,4 +116,10 @@ button:hover {
     grid-template-columns: repeat(4, 1fr); 
     grid-gap: 20px;
     padding: 20px;
+}
+
+.decimal {
+    background:blue;
+    color: white;
+    font-size: 15px;
 }

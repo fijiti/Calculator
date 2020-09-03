@@ -10,7 +10,7 @@ const Calculator = {
     operator: null,
 };
 
-//This modifies values each time a buton is clicked
+//This modifies values each time a button is clicked
 function Input_Digit(digit) {
     const { Display_Value, Wait_Second_Operand } = Calculator;
     // We are checking to see if Wait_Second_Operand is true and set
